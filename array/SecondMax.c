@@ -14,8 +14,7 @@ int getSecondMax(const int *arr, int len) {
         if (arr[i] > max) {
             secondMax = max;
             max = arr[i];
-        }
-        if (arr[i] > secondMax && arr[i] < max) {
+        } else if (arr[i] > secondMax && arr[i] != max) {
             secondMax = arr[i];
         }
     }
@@ -23,7 +22,7 @@ int getSecondMax(const int *arr, int len) {
 }
 
 int main() {
-    int arr[] = {0, 3, -1, 4,5};
+    int arr[] = {0, 3, -1, 4, 5};
     int len = sizeof(arr) / sizeof(arr[0]);
 
     int secondMax = getSecondMax(arr, len);
