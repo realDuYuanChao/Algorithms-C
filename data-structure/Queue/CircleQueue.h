@@ -30,6 +30,10 @@ ElemType deQueue(Queue *pQueue);
 
 bool enQueue(Queue *pQueue, ElemType elem);
 
+ElemType peekFront(Queue queue);
+
+ElemType peekEnd(Queue queue);
+
 void destroy(Queue *pQueue);
 
 void clear(Queue *pQueue);

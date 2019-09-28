@@ -25,6 +25,14 @@ int size(Queue queue) {
     return queue.size;
 }
 
+ElemType peekFront(Queue queue) {
+    return queue.base[queue.front];
+}
+
+ElemType peekEnd(Queue queue) {
+    return queue.base[(queue.rear - 1 + MAX_SIZE) % MAX_SIZE];
+}
+
 int capacity(Queue queue) {
     return queue.capacity;
 }
